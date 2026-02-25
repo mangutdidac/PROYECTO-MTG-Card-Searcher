@@ -15,7 +15,7 @@ def search_cards(
     rarity: Optional[str] = None,
     set_code: Optional[str] = None,
     keywords: Optional[str] = None,
-    type: Optional[str] = None,
+    card_type: Optional[str] = None,   # <-- renombrado
     page: int = 1
 ):
     q_parts = []
@@ -57,8 +57,8 @@ def search_cards(
                 q_parts.append("(" + " OR ".join(f"oracle:{kw.lower()}" for kw in kws) + ")")
 
     # Tipos de carta: multiple selected types should be OR'ed (match any)
-    if type:
-        types = [t.strip() for t in type.split(",") if t.strip()]
+    if card_type:
+        types = [t.strip() for t in card_type.split(",") if t.strip()]
         if types:
             if len(types) == 1:
                 q_parts.append(f"type:{types[0].lower()}")
