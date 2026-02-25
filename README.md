@@ -30,3 +30,10 @@
 - Full deck creation and editing in the frontend.
 - User authentication for cross-device sync.
 - Advanced analytics on card collections and usage patterns.
+
+
+## Contact
+- Dídac Mangut Soria
+- (+34611443771)
+- mangutdidac@gmail.com
+- https://www.linkedin.com/in/dídac-mangut-soria/
