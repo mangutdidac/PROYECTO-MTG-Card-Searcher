@@ -38,13 +38,13 @@ git clone https://github.com/<your-username>/mtg-underdeck.git
 cd mtg-underdeck
 
 2️⃣ Create and activate a Python virtual environment
-# Create a virtual environment
+Create a virtual environment
 python -m venv venv
 
-# Activate
+Activate
 venv\Scripts\activate
 
-# macOS/Linux
+macOS/Linux
 source venv/bin/activate
 
 3️⃣ Install dependencies
