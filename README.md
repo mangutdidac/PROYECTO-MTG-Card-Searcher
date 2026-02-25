@@ -43,9 +43,9 @@
 <body>
     <h1>🃏 MTG UnderDeck – Project Description</h1>
 
-    <div class="section">
+
         <p><strong>MTG UnderDeck</strong> is a web-based application designed to streamline the process of searching, filtering, and managing <em>Magic: The Gathering (MTG)</em> cards. The project allows players to explore card databases efficiently, identify key cards for their decks, mark favorites, and export card data for further analysis or deck-building purposes.</p>
-    </div>
+
 
     <div class="section">
         <h2>🎯 Project Goals</h2>
