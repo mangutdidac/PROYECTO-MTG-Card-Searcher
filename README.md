@@ -31,6 +31,52 @@
 - User authentication for cross-device sync.
 - Advanced analytics on card collections and usage patterns.
 
+## HOW TO RUN THE PROJECT
+
+1️⃣ Clone the repository
+git clone https://github.com/<your-username>/mtg-underdeck.git
+cd mtg-underdeck
+
+2️⃣ Create and activate a Python virtual environment
+# Create a virtual environment
+python -m venv venv
+
+# Activate
+venv\Scripts\activate
+
+# macOS/Linux
+source venv/bin/activate
+
+3️⃣ Install dependencies
+pip install -r requirements.txt
+
+4️⃣ Run the backend (FastAPI)
+The backend handles Scryfall API calls, favorites, and sets. Run it with:
+
+uvicorn backend.app.main:app --reload
+
+The backend will be available at: http://127.0.0.1:8000
+Test the health endpoint: http://127.0.0.1:8000/health → should return {"status": "ok"}
+You can also add --port <PORT> if you want a different port.
+
+5️⃣ Run the frontend (Streamlit)
+In another terminal (make sure the virtual environment is active):
+
+streamlit run main.py
+
+Streamlit will open a browser window automatically, usually at http://localhost:8501.
+The frontend connects to the backend at BACKEND_URL. By default, it points to http://127.0.0.1:8000, but you can override it using an environment variable:
+
+export BACKEND_URL=http://127.0.0.1:8000  # macOS/Linux
+set BACKEND_URL=http://127.0.0.1:8000     # Windows
+
+6️⃣ Using the app
+
+Search Cards: Use filters in the sidebar (name, color, type, rarity, set, keywords) and click “Search”.
+Favorites: Click the ❤️ checkbox to save cards to favorites.
+Download Favorites: Use the buttons at the top to download favorites as CSV or JSON.
+Pagination: Use “Previous” and “Next” buttons to navigate pages.
+All favorite cards are synced with the backend (if running) or saved locally in session state.
 
 ## Contact
 - Dídac Mangut Soria
